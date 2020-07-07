@@ -59,3 +59,11 @@ fn test_show() {
     let s = format!("{:?}", (1, "hi", true));
     assert_eq!(s, "(1, \"hi\", true)");
 }
+
+#[test]
+fn test_empty_tuple() {
+    assert_eq!((), ());
+    assert_eq!(().partial_cmp(&()), Some(Ordering::Equal));
+    assert_eq!(().cmp(&()), Ordering::Equal);
+    assert_eq!(Default::<()>::default(), ());
+}

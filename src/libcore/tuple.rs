@@ -108,6 +108,8 @@ macro_rules! last_type {
 }
 
 tuple_impls! {
+    Tuple0 {
+    }
     Tuple1 {
         (0) -> A
     }
